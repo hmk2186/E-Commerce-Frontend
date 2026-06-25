@@ -1,6 +1,6 @@
 # 🛍️ E-Commerce Frontend
 
-A modern, responsive E-Commerce Frontend built using **HTML5, CSS3, and Vanilla JavaScript**. The project provides a complete shopping experience with product browsing, product details, wishlist, shopping cart, and responsive UI across different devices.
+A modern, responsive E-Commerce Frontend built using **HTML5, CSS3, Bootstrap and Vanilla JavaScript**. The project provides a complete shopping experience with product browsing, product details, wishlist, shopping cart, and responsive UI across different devices.
 
 ## 🚀 Live Demo
 
@@ -29,6 +29,7 @@ A modern, responsive E-Commerce Frontend built using **HTML5, CSS3, and Vanilla 
 - HTML5
 - CSS3
 - JavaScript (ES6)
+- Bootstrap 5
 - Local Storage
 - Responsive Design
 
