@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AeroStore - Modern E-Commerce Experience</title>
+  <meta name="description" content="Discover premium electronics, fashion, home essentials, and fitness gear on AeroStore. Frontend interview demo project built with Bootstrap 5.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Custom CSS (Modular Architecture) -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/categories.css">
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="css/wishlist.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="glass-header">
+    <nav class="navbar navbar-expand-lg container">
+      <div class="container-fluid px-0">
+        <a class="navbar-brand" href="index.html">AeroStore</a>
+        
+        <div class="d-flex align-items-center gap-2 d-lg-none">
+          <!-- Mobile Theme Toggle -->
+          <button class="theme-toggle-btn" aria-label="Toggle Theme"><i class="bi bi-moon-fill"></i></button>
+          
+          <!-- Mobile Wishlist -->
+          <a href="wishlist.html" class="position-relative text-secondary p-2" aria-label="Wishlist">
+            <i class="bi bi-heart fs-5"></i>
+            <span class="badge rounded-pill badge-cart badge-wishlist-count" style="display: none;">0</span>
+          </a>
+          
+          <!-- Mobile Cart -->
+          <a href="cart.html" class="position-relative text-secondary p-2" aria-label="Cart">
+            <i class="bi bi-cart fs-5"></i>
+            <span class="badge rounded-pill badge-cart badge-cart-count" style="display: none;">0</span>
+          </a>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list fs-3 text-secondary"></i>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 mt-3 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          
+          <!-- Desktop Navbar Icons -->
+          <div class="d-none d-lg-flex align-items-center gap-3">
+            <a href="products.html" class="text-secondary p-2" title="Search"><i class="bi bi-search fs-5"></i></a>
+            
+            <a href="wishlist.html" class="position-relative text-secondary p-2" title="Wishlist">
+              <i class="bi bi-heart fs-5"></i>
+              <span class="badge rounded-pill badge-cart badge-wishlist-count" style="display: none;">0</span>
+            </a>
+            
+            <a href="cart.html" class="position-relative text-secondary p-2" title="Cart">
+              <i class="bi bi-cart fs-5"></i>
+              <span class="badge rounded-pill badge-cart badge-cart-count" style="display: none;">0</span>
+            </a>
+            
+            <button class="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme"><i class="bi bi-moon-fill"></i></button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Slider / Carousel -->
+  <section class="hero-section">
+    <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel" data-bs-interval="6000">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="carousel-image-container">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1600&auto=format&fit=crop&q=80" alt="Premium Wireless Headphones Banner">
+          </div>
+          <div class="carousel-caption">
+            <h1 class="hero-title">Experience Sound In Pure Silence</h1>
+            <p class="hero-subtitle">Discover our next-generation Active Noise Cancelling headphones. Up to 40 hours of acoustic bliss.</p>
+            <a href="product-details.html?id=1" class="btn btn-primary btn-lg px-4 py-2.5 hero-btn rounded-pill">Shop Now</a>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="carousel-image-container">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1600&auto=format&fit=crop&q=80" alt="AeroSport Sneakers Banner">
+          </div>
+          <div class="carousel-caption">
+            <h1 class="hero-title">Step Into Unlimited Comfort</h1>
+            <p class="hero-subtitle">Premium leather design meets responsive cushioning. Built for style, engineered for life.</p>
+            <a href="product-details.html?id=2" class="btn btn-primary btn-lg px-4 py-2.5 hero-btn rounded-pill">Explore Sneakers</a>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="carousel-image-container">
+            <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=1600&auto=format&fit=crop&q=80" alt="Vanguard Smartwatch Banner">
+          </div>
+          <div class="carousel-caption">
+            <h1 class="hero-title">Track Your Life, Redefined</h1>
+            <p class="hero-subtitle">Fitness tracking, sleep metrics, and smart assistant integrated into a sleek AMOLED watch.</p>
+            <a href="product-details.html?id=3" class="btn btn-primary btn-lg px-4 py-2.5 hero-btn rounded-pill">View Series 5</a>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Store Features / Trust Badges -->
+  <section class="py-5 bg-body-tertiary border-bottom border-top border-light-subtle">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-3 col-sm-6 text-center">
+          <div class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary p-3 rounded-circle mb-3" style="width: 60px; height: 60px;">
+            <i class="bi bi-truck fs-4"></i>
+          </div>
+          <h5 class="fw-bold fs-6">Free Shipping</h5>
+          <p class="text-secondary small mb-0">On all orders over $99.00</p>
+        </div>
+        <div class="col-md-3 col-sm-6 text-center">
+          <div class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary p-3 rounded-circle mb-3" style="width: 60px; height: 60px;">
+            <i class="bi bi-shield-check fs-4"></i>
+          </div>
+          <h5 class="fw-bold fs-6">Secure Payment</h5>
+          <p class="text-secondary small mb-0">100% protected checkout</p>
+        </div>
+        <div class="col-md-3 col-sm-6 text-center">
+          <div class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary p-3 rounded-circle mb-3" style="width: 60px; height: 60px;">
+            <i class="bi bi-arrow-counterclockwise fs-4"></i>
+          </div>
+          <h5 class="fw-bold fs-6">Easy Returns</h5>
+          <p class="text-secondary small mb-0">30-day hassle-free returns</p>
+        </div>
+        <div class="col-md-3 col-sm-6 text-center">
+          <div class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary p-3 rounded-circle mb-3" style="width: 60px; height: 60px;">
+            <i class="bi bi-headset fs-4"></i>
+          </div>
+          <h5 class="fw-bold fs-6">24/7 Live Support</h5>
+          <p class="text-secondary small mb-0">Dedicated support line</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Categories -->
+  <section class="py-5">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end mb-4">
+        <div>
+          <span class="text-primary fw-bold text-uppercase small tracking-wider">Top Collections</span>
+          <h2 class="fw-bold mb-0">Featured Categories</h2>
+        </div>
+        <a href="products.html" class="btn btn-outline-primary rounded-pill">View All Categories</a>
+      </div>
+      
+      <div class="row g-4">
+        <!-- Electronics -->
+        <div class="col-md-6 col-lg-3">
+          <div class="category-card" onclick="location.href='products.html?category=Electronics'">
+            <img src="https://images.unsplash.com/photo-1526738549149-8e07eca6c147?w=500&auto=format&fit=crop&q=80" alt="Electronics Category">
+            <div class="category-overlay">
+              <h4 class="text-white fw-bold">Electronics</h4>
+              <p class="text-white text-opacity-75 small mb-0">Premium smart gear & gadgets</p>
+            </div>
+          </div>
+        </div>
+        <!-- Fashion -->
+        <div class="col-md-6 col-lg-3">
+          <div class="category-card" onclick="location.href='products.html?category=Fashion'">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=500&auto=format&fit=crop&q=80" alt="Fashion Category">
+            <div class="category-overlay">
+              <h4 class="text-white fw-bold">Fashion</h4>
+              <p class="text-white text-opacity-75 small mb-0">Modern urban wear & shoes</p>
+            </div>
+          </div>
+        </div>
+        <!-- Home & Living -->
+        <div class="col-md-6 col-lg-3">
+          <div class="category-card" onclick="location.href='products.html?category=Home%20&%20Living'">
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=500&auto=format&fit=crop&q=80" alt="Home & Living Category">
+            <div class="category-overlay">
+              <h4 class="text-white fw-bold">Home & Living</h4>
+              <p class="text-white text-opacity-75 small mb-0">Minimalist decor & accessories</p>
+            </div>
+          </div>
+        </div>
+        <!-- Fitness -->
+        <div class="col-md-6 col-lg-3">
+          <div class="category-card" onclick="location.href='products.html?category=Fitness'">
+            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500&auto=format&fit=crop&q=80" alt="Fitness Category">
+            <div class="category-overlay">
+              <h4 class="text-white fw-bold">Fitness</h4>
+              <p class="text-white text-opacity-75 small mb-0">High durability gym gear</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="py-5 bg-body-tertiary">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end mb-4">
+        <div>
+          <span class="text-primary fw-bold text-uppercase small tracking-wider">Top Rated Selection</span>
+          <h2 class="fw-bold mb-0">Featured Products</h2>
+        </div>
+        <a href="products.html" class="btn btn-outline-primary rounded-pill">View Store Catalog</a>
+      </div>
+
+      <div class="row g-4" id="featured-products-container">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Special Banner Promo -->
+  <section class="py-5 my-5 container">
+    <div class="card border-0 glass-card rounded-5 overflow-hidden shadow-lg">
+      <div class="row g-0 align-items-center">
+        <div class="col-lg-6 p-5">
+          <span class="text-primary fw-bold text-uppercase small tracking-wider">Season Clearance</span>
+          <h2 class="display-5 fw-bold my-3 text-gradient">Enjoy Up to 40% Off Select Premium Tech</h2>
+          <p class="text-secondary mb-4 fs-5">Upgrade your setup today with high-performance laptops, accessories, and audio gear at record discounts.</p>
+          <a href="products.html?category=Electronics" class="btn btn-primary px-4 py-2.5 rounded-pill">Shop Electronics</a>
+        </div>
+        <div class="col-lg-6">
+          <img src="https://images.unsplash.com/photo-1496181130204-7552cc14ac1a?w=800&auto=format&fit=crop&q=80" alt="Clearance Sale Banner" class="w-100 object-fit-cover" style="height: 400px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <h5 class="fw-bold text-white mb-3">AeroStore</h5>
+          <p class="text-muted small">Elevating your lifestyle through curated high-quality products. Experiential E-Commerce engineered for modern users.</p>
+          <div class="d-flex gap-3 mt-3">
+            <a href="#" class="text-white opacity-75 hover-primary"><i class="bi bi-facebook fs-5"></i></a>
+            <a href="#" class="text-white opacity-75 hover-primary"><i class="bi bi-instagram fs-5"></i></a>
+            <a href="#" class="text-white opacity-75 hover-primary"><i class="bi bi-twitter-x fs-5"></i></a>
+            <a href="#" class="text-white opacity-75 hover-primary"><i class="bi bi-linkedin fs-5"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="text-uppercase fw-bold text-white mb-3 small">Quick Links</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="index.html" class="small">Home</a></li>
+            <li class="mb-2"><a href="products.html" class="small">Products</a></li>
+            <li class="mb-2"><a href="about.html" class="small">About Us</a></li>
+            <li class="mb-2"><a href="contact.html" class="small">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="text-uppercase fw-bold text-white mb-3 small">Support</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="#" class="small">FAQ & Help</a></li>
+            <li class="mb-2"><a href="#" class="small">Shipping Rates</a></li>
+            <li class="mb-2"><a href="#" class="small">Return Policy</a></li>
+            <li class="mb-2"><a href="#" class="small">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h6 class="text-uppercase fw-bold text-white mb-3 small">Subscribe to Newsletter</h6>
+          <p class="text-muted small">Stay updated on our latest product drops and exclusive sales.</p>
+          <div class="input-group mb-3">
+            <input type="email" class="form-control bg-transparent border-secondary text-white small" placeholder="Enter your email" aria-label="Enter your email">
+            <button class="btn btn-primary" type="button"><i class="bi bi-send"></i></button>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0 text-muted small">&copy; 2026 AeroStore. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+          <div class="d-inline-flex gap-3">
+            <i class="bi bi-cc-visa text-muted fs-4"></i>
+            <i class="bi bi-cc-mastercard text-muted fs-4"></i>
+            <i class="bi bi-paypal text-muted fs-4"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 Bundle JS CDN (including Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  
+  <!-- Products Mock Data -->
+  <script src="js/products-data.js"></script>
+  
+  <!-- Core Main JS -->
+  <script src="js/main.js"></script>
+  
+  <!-- Inline Home Page JS Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      renderFeaturedProducts();
+      
+      // Listen for wishlist updates from other scripts or header interaction
+      window.addEventListener("wishlistUpdated", (e) => {
+        const productCardBtn = document.querySelector(`.wishlist-btn-overlay[data-id="${e.detail.id}"]`);
+        if (productCardBtn) {
+          if (e.detail.active) {
+            productCardBtn.classList.add("active");
+          } else {
+            productCardBtn.classList.remove("active");
+          }
+        }
+      });
+    });
+
+    function renderFeaturedProducts() {
+      const container = document.getElementById("featured-products-container");
+      if (!container) return;
+
+      const featuredList = getFeaturedProducts();
+      
+      let html = "";
+      featuredList.forEach(prod => {
+        const isFav = isInWishlist(prod.id);
+        const ratingCount = Math.round(prod.rating);
+        let starHtml = "";
+        for (let i = 1; i <= 5; i++) {
+          if (i <= ratingCount) {
+            starHtml += '<i class="bi bi-star-fill"></i>';
+          } else {
+            starHtml += '<i class="bi bi-star"></i>';
+          }
+        }
+
+        const badgeHtml = prod.badge 
+          ? `<span class="product-badge bg-primary text-white">${prod.badge}</span>` 
+          : '';
+
+        html += `
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="product-card">
+              ${badgeHtml}
+              <div class="wishlist-btn-overlay ${isFav ? 'active' : ''}" data-id="${prod.id}" onclick="event.preventDefault(); toggleWishlistLocal(${prod.id})">
+                <i class="bi bi-heart-fill"></i>
+              </div>
+              <a href="product-details.html?id=${prod.id}" class="product-image-wrapper">
+                <img src="${prod.image}" alt="${prod.name}">
+              </a>
+              <div class="product-card-body">
+                <span class="product-category">${prod.category}</span>
+                <a href="product-details.html?id=${prod.id}" class="product-title fw-bold">${prod.name}</a>
+                <div class="rating-stars">
+                  ${starHtml} <span class="text-secondary small ms-1">(${prod.rating})</span>
+                </div>
+                <div class="product-card-footer">
+                  <span class="product-price">$${prod.price.toFixed(2)}</span>
+                  <button class="btn-add-to-cart" onclick="event.preventDefault(); addToCart(${prod.id}, 1)" aria-label="Add to cart">
+                    <i class="bi bi-cart-plus fs-5"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    function toggleWishlistLocal(id) {
+      const btn = document.querySelector(`.wishlist-btn-overlay[data-id="${id}"]`);
+      const isActive = toggleWishlist(id);
+      if (btn) {
+        if (isActive) {
+          btn.classList.add("active");
+        } else {
+          btn.classList.remove("active");
+        }
+      }
+    }
+  </script>
+</body>
+</html>

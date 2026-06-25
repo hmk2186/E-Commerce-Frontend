@@ -1,0 +1,76 @@
+/* ==========================================================================
+   hero.css - Hero Slides, Banner Carousel, and Keyframe Animations
+   ========================================================================== */
+
+.hero-carousel .carousel-item {
+  height: 600px;
+  background-color: #0b0f19;
+}
+
+.hero-carousel .carousel-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-carousel .carousel-image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(15, 23, 42, 0.9) 30%, rgba(15, 23, 42, 0.4) 60%, rgba(15, 23, 42, 0.1));
+  z-index: 1;
+}
+
+.hero-carousel img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+}
+
+.hero-carousel .carousel-caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: auto;
+  left: 8%;
+  right: 8%;
+  text-align: left;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #cbd5e1;
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.8s ease 0.2s forwards;
+  opacity: 0;
+}
+
+.hero-btn {
+  animation: fadeInUp 0.8s ease 0.4s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

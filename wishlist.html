@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AeroStore - Your Wishlist</title>
+  <meta name="description" content="Manage your saved E-Commerce products. Transfer favorite items to shopping cart, or clear items from your wishlist.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Custom CSS (Modular Architecture) -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/categories.css">
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="css/wishlist.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="glass-header">
+    <nav class="navbar navbar-expand-lg container">
+      <div class="container-fluid px-0">
+        <a class="navbar-brand" href="index.html">AeroStore</a>
+        
+        <div class="d-flex align-items-center gap-2 d-lg-none">
+          <!-- Mobile Theme Toggle -->
+          <button class="theme-toggle-btn" aria-label="Toggle Theme"><i class="bi bi-moon-fill"></i></button>
+          
+          <!-- Mobile Wishlist -->
+          <a href="wishlist.html" class="position-relative text-secondary p-2 active" aria-label="Wishlist">
+            <i class="bi bi-heart fs-5"></i>
+            <span class="badge rounded-pill badge-cart badge-wishlist-count" style="display: none;">0</span>
+          </a>
+          
+          <!-- Mobile Cart -->
+          <a href="cart.html" class="position-relative text-secondary p-2" aria-label="Cart">
+            <i class="bi bi-cart fs-5"></i>
+            <span class="badge rounded-pill badge-cart badge-cart-count" style="display: none;">0</span>
+          </a>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list fs-3 text-secondary"></i>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 mt-3 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          
+          <!-- Desktop Navbar Icons -->
+          <div class="d-none d-lg-flex align-items-center gap-3">
+            <a href="products.html" class="text-secondary p-2" title="Search"><i class="bi bi-search fs-5"></i></a>
+            
+            <a href="wishlist.html" class="position-relative text-secondary p-2 active" title="Wishlist">
+              <i class="bi bi-heart fs-5"></i>
+              <span class="badge rounded-pill badge-cart badge-wishlist-count" style="display: none;">0</span>
+            </a>
+            
+            <a href="cart.html" class="position-relative text-secondary p-2" title="Cart">
+              <i class="bi bi-cart fs-5"></i>
+              <span class="badge rounded-pill badge-cart badge-cart-count" style="display: none;">0</span>
+            </a>
+            
+            <button class="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme"><i class="bi bi-moon-fill"></i></button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Page Title -->
+  <section class="py-4 bg-body-tertiary border-bottom">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-1">
+          <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Wishlist</li>
+        </ol>
+      </nav>
+      <h1 class="fw-bold mb-0 fs-2">Your Saved Wishlist</h1>
+    </div>
+  </section>
+
+  <!-- Wishlist Panel -->
+  <main class="py-5">
+    <div class="container">
+      
+      <!-- Wishlist Grid -->
+      <div class="row g-4" id="wishlist-grid">
+        <!-- Rendered dynamically via js/wishlist.js -->
+      </div>
+
+      <!-- Empty Wishlist State -->
+      <div class="text-center py-5 my-5 d-none" id="wishlist-empty-state">
+        <i class="bi bi-heartbreak fs-1 text-muted d-block mb-3"></i>
+        <h3 class="fw-bold">Your Wishlist is Empty</h3>
+        <p class="text-secondary">Explore our products catalog and tap the heart icon to save products here.</p>
+        <a href="products.html" class="btn btn-primary rounded-pill mt-3 px-4 py-2">Discover Products</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <h5 class="fw-bold text-white mb-3">AeroStore</h5>
+          <p class="text-muted small">Elevating your lifestyle through curated high-quality products. Experiential E-Commerce engineered for modern users.</p>
+          <div class="d-flex gap-3 mt-3">
+            <a href="#" class="text-white opacity-75 hover-primary"><i class="bi bi-facebook fs-5"></i></a>
+            <a href="#" class="text-white opacity-75 hover-primary"><i class="bi bi-instagram fs-5"></i></a>
+            <a href="#" class="text-white opacity-75 hover-primary"><i class="bi bi-twitter-x fs-5"></i></a>
+            <a href="#" class="text-white opacity-75 hover-primary"><i class="bi bi-linkedin fs-5"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="text-uppercase fw-bold text-white mb-3 small">Quick Links</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="index.html" class="small">Home</a></li>
+            <li class="mb-2"><a href="products.html" class="small">Products</a></li>
+            <li class="mb-2"><a href="about.html" class="small">About Us</a></li>
+            <li class="mb-2"><a href="contact.html" class="small">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="text-uppercase fw-bold text-white mb-3 small">Support</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="#" class="small">FAQ & Help</a></li>
+            <li class="mb-2"><a href="#" class="small">Shipping Rates</a></li>
+            <li class="mb-2"><a href="#" class="small">Return Policy</a></li>
+            <li class="mb-2"><a href="#" class="small">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h6 class="text-uppercase fw-bold text-white mb-3 small">Subscribe to Newsletter</h6>
+          <p class="text-muted small">Stay updated on our latest product drops and exclusive sales.</p>
+          <div class="input-group mb-3">
+            <input type="email" class="form-control bg-transparent border-secondary text-white small" placeholder="Enter your email" aria-label="Enter your email">
+            <button class="btn btn-primary" type="button"><i class="bi bi-send"></i></button>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0 text-muted small">&copy; 2026 AeroStore. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+          <div class="d-inline-flex gap-3">
+            <i class="bi bi-cc-visa text-muted fs-4"></i>
+            <i class="bi bi-cc-mastercard text-muted fs-4"></i>
+            <i class="bi bi-paypal text-muted fs-4"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 Bundle JS CDN (including Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  
+  <!-- Products Mock Data -->
+  <script src="js/products-data.js"></script>
+  
+  <!-- Core Main JS -->
+  <script src="js/main.js"></script>
+  
+  <!-- Page Specific JS -->
+  <script src="js/wishlist.js"></script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AeroStore - About Us</title>
+  <meta name="description" content="Learn about AeroStore's history, mission, core values, and meet our passionate product and engineering leadership team.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Custom CSS (Modular Architecture) -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/categories.css">
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="css/wishlist.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="glass-header">
+    <nav class="navbar navbar-expand-lg container">
+      <div class="container-fluid px-0">
+        <a class="navbar-brand" href="index.html">AeroStore</a>
+        
+        <div class="d-flex align-items-center gap-2 d-lg-none">
+          <!-- Mobile Theme Toggle -->
+          <button class="theme-toggle-btn" aria-label="Toggle Theme"><i class="bi bi-moon-fill"></i></button>
+          
+          <!-- Mobile Wishlist -->
+          <a href="wishlist.html" class="position-relative text-secondary p-2" aria-label="Wishlist">
+            <i class="bi bi-heart fs-5"></i>
+            <span class="badge rounded-pill badge-cart badge-wishlist-count" style="display: none;">0</span>
+          </a>
+          
+          <!-- Mobile Cart -->
+          <a href="cart.html" class="position-relative text-secondary p-2" aria-label="Cart">
+            <i class="bi bi-cart fs-5"></i>
+            <span class="badge rounded-pill badge-cart badge-cart-count" style="display: none;">0</span>
+          </a>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list fs-3 text-secondary"></i>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 mt-3 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          
+          <!-- Desktop Navbar Icons -->
+          <div class="d-none d-lg-flex align-items-center gap-3">
+            <a href="products.html" class="text-secondary p-2" title="Search"><i class="bi bi-search fs-5"></i></a>
+            
+            <a href="wishlist.html" class="position-relative text-secondary p-2" title="Wishlist">
+              <i class="bi bi-heart fs-5"></i>
+              <span class="badge rounded-pill badge-cart badge-wishlist-count" style="display: none;">0</span>
+            </a>
+            
+            <a href="cart.html" class="position-relative text-secondary p-2" title="Cart">
+              <i class="bi bi-cart fs-5"></i>
+              <span class="badge rounded-pill badge-cart badge-cart-count" style="display: none;">0</span>
+            </a>
+            
+            <button class="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme"><i class="bi bi-moon-fill"></i></button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Breadcrumb -->
+  <section class="py-3 bg-body-tertiary border-bottom">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">About Us</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- About Hero Banner -->
+  <section class="py-5 bg-primary text-white text-center position-relative overflow-hidden" style="background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)) !important;">
+    <div class="container py-4 position-relative z-2">
+      <h1 class="display-4 fw-extrabold mb-3">Our Story</h1>
+      <p class="lead max-width-600 mx-auto opacity-90">Building the destination for premium everyday essentials, designed with minimalist aesthetics and engineered for comfort.</p>
+    </div>
+  </section>
+
+  <!-- Philosophy and Vision Grid -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4 align-items-center mb-5">
+        <div class="col-lg-6">
+          <span class="text-primary fw-bold text-uppercase small tracking-wider">AeroStore Philosophy</span>
+          <h2 class="fw-bold my-3">Designing for the Modern Era</h2>
+          <p class="text-secondary">Established in 2024, AeroStore started with a single premise: design top-tier products without the high-end retail markups. We began by developing premium wireless sound systems and expanded into custom apparel, ergonomic packs, and home accessories.</p>
+          <p class="text-secondary">We source only the highest grade materials—whether it's premium full-grain leather for our sneakers, natural solid ash wood for our lamps, or aerospace-grade aluminum for our electronics. Every item goes through rigorous quality control before it ships to your door.</p>
+        </div>
+        <div class="col-lg-6">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&auto=format&fit=crop&q=80" alt="Designing products brainstorm session" class="w-100 rounded-4 shadow-lg object-fit-cover" style="height: 380px;">
+        </div>
+      </div>
+
+      <hr class="border-light-subtle my-5">
+
+      <!-- Core Values -->
+      <div class="text-center mb-5">
+        <span class="text-primary fw-bold text-uppercase small tracking-wider">Guiding Principles</span>
+        <h2 class="fw-bold mt-2">Our Core Values</h2>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card border-0 bg-body-tertiary h-100 p-4 rounded-4 text-center">
+            <div class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary p-3 rounded-circle mx-auto mb-3" style="width: 60px; height: 60px;">
+              <i class="bi bi-award fs-4"></i>
+            </div>
+            <h5 class="fw-bold">Premium Quality</h5>
+            <p class="text-secondary small mb-0">We never compromise on components. We source materials from ethical and highly rated manufacturing facilities.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 bg-body-tertiary h-100 p-4 rounded-4 text-center">
+            <div class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary p-3 rounded-circle mx-auto mb-3" style="width: 60px; height: 60px;">
+              <i class="bi bi-recycle fs-4"></i>
+            </div>
+            <h5 class="fw-bold">Sustainability</h5>
+            <p class="text-secondary small mb-0">All our packaging is 100% recyclable. We minimize carbon output by engineering compact cargo boxes.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 bg-body-tertiary h-100 p-4 rounded-4 text-center">
+            <div class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary p-3 rounded-circle mx-auto mb-3" style="width: 60px; height: 60px;">
+              <i class="bi bi-people fs-4"></i>
+            </div>
+            <h5 class="fw-bold">Customer First</h5>
+            <p class="text-secondary small mb-0">Our support engineers are available round-the-clock. We offer a 30-day no questions asked return policy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Leadership Section -->
+  <section class="py-5 bg-body-tertiary border-top">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="text-primary fw-bold text-uppercase small tracking-wider">Meet the Creators</span>
+        <h2 class="fw-bold mt-2">Executive Leadership Team</h2>
+      </div>
+
+      <div class="row g-4">
+        <!-- CEO -->
+        <div class="col-md-4">
+          <div class="team-member-card shadow-sm">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&auto=format&fit=crop&q=80" alt="Sarah Jenkins" class="team-member-img">
+            <h5 class="fw-bold mb-1">Sarah Jenkins</h5>
+            <p class="text-primary small mb-3">Founder & CEO</p>
+            <p class="text-secondary small">Sarah has over 12 years of product design experience and is the driving force behind AeroStore's brand vision.</p>
+            <div class="d-flex justify-content-center gap-2 mt-3">
+              <a href="#" class="btn btn-outline-secondary btn-sm rounded-circle" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="btn btn-outline-secondary btn-sm rounded-circle" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Lead Designer -->
+        <div class="col-md-4">
+          <div class="team-member-card shadow-sm">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop&q=80" alt="Alex Rivera" class="team-member-img">
+            <h5 class="fw-bold mb-1">Alex Rivera</h5>
+            <p class="text-primary small mb-3">Lead Product Designer</p>
+            <p class="text-secondary small">Alex leads the aesthetic and mechanical design of our electronics and home decor product catalog lines.</p>
+            <div class="d-flex justify-content-center gap-2 mt-3">
+              <a href="#" class="btn btn-outline-secondary btn-sm rounded-circle" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="btn btn-outline-secondary btn-sm rounded-circle" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- CTO -->
+        <div class="col-md-4">
+          <div class="team-member-card shadow-sm">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&auto=format&fit=crop&q=80" alt="Emily Chen" class="team-member-img">
+            <h5 class="fw-bold mb-1">Emily Chen</h5>
+            <p class="text-primary small mb-3">Chief Technology Officer</p>
+            <p class="text-secondary small">Emily manages the logistics technologies, delivery infrastructure, and digital engineering solutions.</p>
+            <div class="d-flex justify-content-center gap-2 mt-3">
+              <a href="#" class="btn btn-outline-secondary btn-sm rounded-circle" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="btn btn-outline-secondary btn-sm rounded-circle" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <h5 class="fw-bold text-white mb-3">AeroStore</h5>
+          <p class="text-muted small">Elevating your lifestyle through curated high-quality products. Experiential E-Commerce engineered for modern users.</p>
+          <div class="d-flex gap-3 mt-3">
+            <a href="#" class="text-white opacity-75 hover-primary"><i class="bi bi-facebook fs-5"></i></a>
+            <a href="#" class="text-white opacity-75 hover-primary"><i class="bi bi-instagram fs-5"></i></a>
+            <a href="#" class="text-white opacity-75 hover-primary"><i class="bi bi-twitter-x fs-5"></i></a>
+            <a href="#" class="text-white opacity-75 hover-primary"><i class="bi bi-linkedin fs-5"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="text-uppercase fw-bold text-white mb-3 small">Quick Links</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="index.html" class="small">Home</a></li>
+            <li class="mb-2"><a href="products.html" class="small">Products</a></li>
+            <li class="mb-2"><a href="about.html" class="small">About Us</a></li>
+            <li class="mb-2"><a href="contact.html" class="small">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="text-uppercase fw-bold text-white mb-3 small">Support</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="#" class="small">FAQ & Help</a></li>
+            <li class="mb-2"><a href="#" class="small">Shipping Rates</a></li>
+            <li class="mb-2"><a href="#" class="small">Return Policy</a></li>
+            <li class="mb-2"><a href="#" class="small">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h6 class="text-uppercase fw-bold text-white mb-3 small">Subscribe to Newsletter</h6>
+          <p class="text-muted small">Stay updated on our latest product drops and exclusive sales.</p>
+          <div class="input-group mb-3">
+            <input type="email" class="form-control bg-transparent border-secondary text-white small" placeholder="Enter your email" aria-label="Enter your email">
+            <button class="btn btn-primary" type="button"><i class="bi bi-send"></i></button>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0 text-muted small">&copy; 2026 AeroStore. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+          <div class="d-inline-flex gap-3">
+            <i class="bi bi-cc-visa text-muted fs-4"></i>
+            <i class="bi bi-cc-mastercard text-muted fs-4"></i>
+            <i class="bi bi-paypal text-muted fs-4"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 Bundle JS CDN (including Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  
+  <!-- Products Mock Data -->
+  <script src="js/products-data.js"></script>
+  
+  <!-- Core Main JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+/* ==========================================================================
+   wishlist.css - Wishlist Specific Styles
+   ========================================================================== */
+
+/* Heart/Wishlist Overlay Button on Cards */
+.wishlist-btn-overlay {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  background: var(--bg-surface);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+}
+
+.wishlist-btn-overlay:hover {
+  color: var(--color-danger);
+  background: var(--bg-surface);
+  transform: scale(1.1);
+}
+
+.wishlist-btn-overlay.active {
+  color: #ef4444 !important;
+}

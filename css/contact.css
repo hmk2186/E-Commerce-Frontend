@@ -1,0 +1,13 @@
+/* ==========================================================================
+   contact.css - Contact Form Focus Highlighting
+   ========================================================================== */
+
+#contact-form .form-control:focus,
+#contact-form .form-select:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 0.25rem rgba(var(--color-primary-rgb), 0.15);
+}
+
+#contact-form textarea.form-control {
+  resize: vertical;
+}

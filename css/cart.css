@@ -1,0 +1,32 @@
+/* ==========================================================================
+   cart.css - Shopping Cart Layout and Checkout Details
+   ========================================================================== */
+
+.cart-table-container {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+}
+
+.cart-item-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: var(--border-radius-sm);
+  background-color: #f1f5f9;
+  border: 1px solid var(--border-color);
+}
+
+[data-bs-theme="dark"] .cart-item-img {
+  background-color: #1e293b;
+}
+
+.summary-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  position: sticky;
+  top: calc(var(--navbar-height) + 20px);
+}

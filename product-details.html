@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AeroStore - Product Details</title>
+  <meta name="description" content="View product specifications, description, features, ratings, and customer reviews. Add products directly to cart or wishlist.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Custom CSS (Modular Architecture) -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/categories.css">
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="css/wishlist.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="glass-header">
+    <nav class="navbar navbar-expand-lg container">
+      <div class="container-fluid px-0">
+        <a class="navbar-brand" href="index.html">AeroStore</a>
+        
+        <div class="d-flex align-items-center gap-2 d-lg-none">
+          <!-- Mobile Theme Toggle -->
+          <button class="theme-toggle-btn" aria-label="Toggle Theme"><i class="bi bi-moon-fill"></i></button>
+          
+          <!-- Mobile Wishlist -->
+          <a href="wishlist.html" class="position-relative text-secondary p-2" aria-label="Wishlist">
+            <i class="bi bi-heart fs-5"></i>
+            <span class="badge rounded-pill badge-cart badge-wishlist-count" style="display: none;">0</span>
+          </a>
+          
+          <!-- Mobile Cart -->
+          <a href="cart.html" class="position-relative text-secondary p-2" aria-label="Cart">
+            <i class="bi bi-cart fs-5"></i>
+            <span class="badge rounded-pill badge-cart badge-cart-count" style="display: none;">0</span>
+          </a>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list fs-3 text-secondary"></i>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 mt-3 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          
+          <!-- Desktop Navbar Icons -->
+          <div class="d-none d-lg-flex align-items-center gap-3">
+            <a href="products.html" class="text-secondary p-2" title="Search"><i class="bi bi-search fs-5"></i></a>
+            
+            <a href="wishlist.html" class="position-relative text-secondary p-2" title="Wishlist">
+              <i class="bi bi-heart fs-5"></i>
+              <span class="badge rounded-pill badge-cart badge-wishlist-count" style="display: none;">0</span>
+            </a>
+            
+            <a href="cart.html" class="position-relative text-secondary p-2" title="Cart">
+              <i class="bi bi-cart fs-5"></i>
+              <span class="badge rounded-pill badge-cart badge-cart-count" style="display: none;">0</span>
+            </a>
+            
+            <button class="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme"><i class="bi bi-moon-fill"></i></button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Page Breadcrumb -->
+  <section class="py-3 bg-body-tertiary border-bottom">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0" id="details-breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
+          <li class="breadcrumb-item"><a href="products.html" class="text-decoration-none">Products</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Loading...</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Main Details Section -->
+  <main class="py-5" id="product-details-section">
+    <div class="container">
+      <div class="row g-5">
+        
+        <!-- Left: Product Image -->
+        <div class="col-md-6">
+          <div class="product-details-img-container">
+            <img src="" alt="Product Image" id="p-detail-image" class="img-fluid">
+          </div>
+        </div>
+        
+        <!-- Right: Content Information -->
+        <div class="col-md-6">
+          <span class="badge bg-primary text-white rounded-pill mb-2 px-3 py-2" id="p-detail-badge" style="display: none;">NEW</span>
+          <p class="text-primary fw-bold text-uppercase small tracking-wider mb-1" id="p-detail-category">Category</p>
+          <h1 class="fw-bold mb-2 fs-2" id="p-detail-name">Product Name</h1>
+          
+          <!-- Rating -->
+          <div class="d-flex align-items-center mb-3">
+            <div class="rating-stars mb-0 me-2" id="p-detail-stars">
+              <!-- Rendered via JS -->
+            </div>
+            <span class="text-secondary small" id="p-detail-rating-text">(0.0 Rating)</span>
+          </div>
+
+          <!-- Price & Stock -->
+          <div class="d-flex align-items-baseline gap-3 mb-4">
+            <span class="fs-3 fw-bold text-primary" id="p-detail-price">$0.00</span>
+            <span class="badge bg-success-subtle text-success border border-success-subtle px-2 py-1" id="p-detail-stock">In Stock</span>
+          </div>
+
+          <!-- Description -->
+          <p class="text-secondary mb-4" id="p-detail-description">
+            Loading description...
+          </p>
+
+          <!-- Divider -->
+          <hr class="border-light-subtle my-4">
+
+          <!-- Add to Cart Panel -->
+          <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
+            <!-- Qty Select -->
+            <div class="qty-selector">
+              <button class="qty-btn" id="qty-minus" aria-label="Decrease Quantity"><i class="bi bi-dash"></i></button>
+              <input type="number" class="qty-input" id="qty-input" value="1" min="1" max="99">
+              <button class="qty-btn" id="qty-plus" aria-label="Increase Quantity"><i class="bi bi-plus"></i></button>
+            </div>
+
+            <!-- Actions -->
+            <button class="btn btn-primary btn-lg px-4 rounded-pill d-flex align-items-center gap-2" id="btn-add-cart-detail">
+              <i class="bi bi-cart-plus fs-5"></i> Add to Cart
+            </button>
+
+            <button class="btn btn-outline-danger btn-lg px-3 rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;" id="btn-add-wishlist-detail" aria-label="Toggle Wishlist">
+              <i class="bi bi-heart"></i>
+            </button>
+          </div>
+
+          <!-- Bullet Features Accordion -->
+          <div class="accordion accordion-flush" id="featuresAccordion">
+            <div class="accordion-item bg-transparent">
+              <h2 class="accordion-header">
+                <button class="accordion-button px-0 fw-semibold bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFeatures" aria-expanded="true" aria-controls="collapseFeatures">
+                  Product Features
+                </button>
+              </h2>
+              <div id="collapseFeatures" class="accordion-collapse collapse show" data-bs-parent="#featuresAccordion">
+                <div class="accordion-body px-0 py-2">
+                  <ul class="list-group list-group-flush" id="p-detail-features">
+                    <!-- Rendered via JS -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Related Products -->
+  <section class="py-5 bg-body-tertiary border-top">
+    <div class="container">
+      <h3 class="fw-bold mb-4">You May Also Like</h3>
+      <div class="row g-4" id="related-products-grid">
+        <!-- Related Products Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <h5 class="fw-bold text-white mb-3">AeroStore</h5>
+          <p class="text-muted small">Elevating your lifestyle through curated high-quality products. Experiential E-Commerce engineered for modern users.</p>
+          <div class="d-flex gap-3 mt-3">
+            <a href="#" class="text-white opacity-75 hover-primary"><i class="bi bi-facebook fs-5"></i></a>
+            <a href="#" class="text-white opacity-75 hover-primary"><i class="bi bi-instagram fs-5"></i></a>
+            <a href="#" class="text-white opacity-75 hover-primary"><i class="bi bi-twitter-x fs-5"></i></a>
+            <a href="#" class="text-white opacity-75 hover-primary"><i class="bi bi-linkedin fs-5"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="text-uppercase fw-bold text-white mb-3 small">Quick Links</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="index.html" class="small">Home</a></li>
+            <li class="mb-2"><a href="products.html" class="small">Products</a></li>
+            <li class="mb-2"><a href="about.html" class="small">About Us</a></li>
+            <li class="mb-2"><a href="contact.html" class="small">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="text-uppercase fw-bold text-white mb-3 small">Support</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="#" class="small">FAQ & Help</a></li>
+            <li class="mb-2"><a href="#" class="small">Shipping Rates</a></li>
+            <li class="mb-2"><a href="#" class="small">Return Policy</a></li>
+            <li class="mb-2"><a href="#" class="small">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h6 class="text-uppercase fw-bold text-white mb-3 small">Subscribe to Newsletter</h6>
+          <p class="text-muted small">Stay updated on our latest product drops and exclusive sales.</p>
+          <div class="input-group mb-3">
+            <input type="email" class="form-control bg-transparent border-secondary text-white small" placeholder="Enter your email" aria-label="Enter your email">
+            <button class="btn btn-primary" type="button"><i class="bi bi-send"></i></button>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0 text-muted small">&copy; 2026 AeroStore. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+          <div class="d-inline-flex gap-3">
+            <i class="bi bi-cc-visa text-muted fs-4"></i>
+            <i class="bi bi-cc-mastercard text-muted fs-4"></i>
+            <i class="bi bi-paypal text-muted fs-4"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 Bundle JS CDN (including Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  
+  <!-- Products Mock Data -->
+  <script src="js/products-data.js"></script>
+  
+  <!-- Core Main JS -->
+  <script src="js/main.js"></script>
+  
+  <!-- Page Specific JS -->
+  <script src="js/product-details.js"></script>
+</body>
+</html>
